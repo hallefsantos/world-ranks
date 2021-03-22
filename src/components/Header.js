@@ -34,8 +34,11 @@ const Header = () => {
                 className="ml-2 text-gray-400 focus:outline-none"
                 onClick={handleDarkMode}
             >
-                <HiOutlineSun className="w-6 h-6 hidden" />
-                <HiOutlineMoon className="w-6 h-6 " />
+                {darkMode ? (
+                    <HiOutlineSun className="w-6 h-6" />
+                ) : (
+                    <HiOutlineMoon className="w-6 h-6" />
+                )}
             </button>
         </header>
     )

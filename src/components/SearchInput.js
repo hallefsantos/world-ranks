@@ -7,7 +7,7 @@ const SearchInput = ({ className, ...rest }) => {
                 <HiSearch className="w-5 h-5 text-gray-300" />
             </span>
             <input 
-                className="w-full py-4 pl-14 pr-5 bg-white rounded-lg placeholder-gray-300 focus:outline-none"
+                className="w-full py-4 pl-14 pr-5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-200 rounded-lg placeholder-gray-300 focus:outline-none"
                 type="text" 
                 placeholder="Filter by Name, Region or Subregion"
                 {...rest}

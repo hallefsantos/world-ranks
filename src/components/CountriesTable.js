@@ -49,7 +49,7 @@ const CountriesTable = ({ countries }) => {
     
     return (
         <div className="mt-5">
-            <div className="sticky top-0 z-10 hidden sm:flex mb-3 py-2 px-5 w-full text-gray-400 bg-gray-100">
+            <div className="sticky top-0 z-10 hidden sm:flex mb-3 py-2 px-5 w-full text-gray-400 dark:text-gray-200 bg-gray-100 dark:bg-gray-900">
                 <div className="w-1/12"></div>
                 <div className="w-5/12">
                     <button 

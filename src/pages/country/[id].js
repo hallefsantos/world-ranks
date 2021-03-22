@@ -29,7 +29,7 @@ const Country = ({ country }) => {
             <Header />
             
             <main className="flex flex-wrap md:flex-nowrap items-start space-y-5 md:space-y-0 md:space-x-5">
-                <Panel className="w-full md:w-2/5 text-center text-gray-700">
+                <Panel className="w-full md:w-2/5 text-center text-gray-700 dark:text-gray-200">
                     <img 
                         className="rounded"
                         src={country.flag} 
@@ -55,7 +55,7 @@ const Country = ({ country }) => {
                 </Panel>
                     
                 <Panel className="w-full md:w-3/5">
-                    <h2 className="text-gray-700 font-medium">Details</h2>
+                    <h2 className="text-gray-700 dark:text-gray-100 font-medium">Details</h2>
 
                     <div className="divide-y divide-light-blue-400">
                         <CountryRow 
@@ -82,28 +82,30 @@ const Country = ({ country }) => {
                             />
                         )}
 
-                        <div className="py-5">
-                            <span className="font-medium text-gray-300">Neighbouring Countries</span>
+                        {borders.length > 0 && (
+                            <div className="py-5">
+                                <span className="font-medium text-gray-300">Neighbouring Countries</span>
 
-                            <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                                {borders.map(({ name, flag, alpha3Code }) => (
-                                    <Link href={`/country/${alpha3Code}`}>
-                                        <div className="cursor-pointer">
-                                            <img 
-                                                className="rounded-sm"
-                                                src={flag} 
-                                                alt={`${name} Flag`}
-                                            />
-                                            <h3 
-                                                className="mt-2 text-gray-700 text-center font-semibold"
-                                            >
-                                                {name}
-                                            </h3>
-                                        </div>
-                                    </Link>
-                                ))}
+                                <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+                                    {borders.map(({ name, flag, alpha3Code }) => (
+                                        <Link href={`/country/${alpha3Code}`}>
+                                            <div className="cursor-pointer">
+                                                <img 
+                                                    className="rounded-sm"
+                                                    src={flag} 
+                                                    alt={`${name} Flag`}
+                                                />
+                                                <h3 
+                                                    className="mt-2 text-gray-700 dark:text-gray-200 text-center font-semibold"
+                                                >
+                                                    {name}
+                                                </h3>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </Panel>
             </main>

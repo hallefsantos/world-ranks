@@ -25,7 +25,7 @@ const Home = ({ countries }) => {
             <Header />
 
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                <div className="mb-4 lg:mb-0 text-gray-400">
+                <div className="mb-4 lg:mb-0 text-gray-400 dark:text-gray-200">
                     Found {filteredCountries.length} countries
                 </div>
 
