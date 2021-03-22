@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState } from 'react'
 
 import MainCointainer from '../components/MainCointainer'
@@ -22,6 +23,9 @@ const Home = ({ countries }) => {
 
     return (
         <MainCointainer>
+            <Head>
+                <title>Homepage | World Ranks</title>
+            </Head>
             <Header />
 
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">

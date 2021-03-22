@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
@@ -26,6 +27,10 @@ const Country = ({ country }) => {
 
     return (
         <MainCointainer>
+            <Head>
+                <title>{country.name} | World Ranks</title>
+            </Head>
+
             <Header />
             
             <main className="flex flex-wrap md:flex-nowrap items-start space-y-5 md:space-y-0 md:space-x-5">
