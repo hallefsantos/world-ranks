@@ -81,10 +81,21 @@ const Country = ({ country }) => {
                         />
 
                         {country.gini && (
-                            <CountryRow 
-                                label="Gini" 
-                                content={`${country.gini}%`}
-                            />
+                            <div className="py-5 flex justify-between font-medium">
+                                <span className="text-gray-300">Gini</span>
+                                <div className="w-44 flex items-center space-x-3">
+                                    <div className="relative flex-1 h-2 bg-gray-200 rounded-md overflow-hidden">
+                                        <div 
+                                            className="absolute left-0 inset-y-0 bg-green-400" 
+                                            style={{width: `${country.gini}%`}}
+                                        >
+                                        </div>
+                                    </div>
+                                    <span className="text-gray-700 dark:text-white">
+                                        {country.gini ?? 0 }%
+                                    </span>
+                                </div>
+                            </div>
                         )}
 
                         {borders.length > 0 && (

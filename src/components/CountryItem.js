@@ -26,9 +26,21 @@ const CountryItem = ({ country }) => {
                     <span className="sm:hidden text-gray-400">Area (km²): </span>
                     {country.area ?? 0 }
                 </span>
-                <span className="sm:w-2/12 sm:text-center">
+                <span className="flex items-center space-x-2 sm:w-2/12">
                     <span className="sm:hidden text-gray-400">Gini: </span>
-                    {country.gini ?? 0 }%
+
+                    <div className="w-32 sm:w-full flex items-center space-x-3">
+                        <div className="relative flex-1 h-2 bg-gray-200 rounded-md overflow-hidden">
+                            <div 
+                                className="absolute left-0 inset-y-0 bg-green-400" 
+                                style={{width: `${country.gini}%`}}
+                            >
+                            </div>
+                        </div>
+                        <span className="w-11 text-sm">
+                            {country.gini ?? 0 }%
+                        </span>
+                    </div>
                 </span>
             </div>
         </Link>
