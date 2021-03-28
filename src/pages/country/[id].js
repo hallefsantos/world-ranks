@@ -104,7 +104,7 @@ const Country = ({ country }) => {
 
                                 <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                                     {borders.map(({ name, flag, alpha3Code }) => (
-                                        <Link href={`/country/${alpha3Code}`}>
+                                        <Link key={alpha3Code} href={`/country/${alpha3Code}`}>
                                             <div className="cursor-pointer">
                                                 <img 
                                                     className="rounded-sm"
